@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes Fron end test Lecture</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <h2>notes</h2>
+    <button id="get-btn" onclick="getUser()">get notes</button>
+    <form id="form" onsubmit="addUser(event, this )">
+      <input type="text" id="name" />
+      <input type="email" id="email" />
+      <input type="number" id="age" />
+      <!-- <input type="id" id="id" /> -->
+
+      <button type="submit">send notes</button>
+    </form>
+  </body>
+</html>
