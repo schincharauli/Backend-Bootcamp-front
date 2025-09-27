@@ -10,13 +10,13 @@
   <body>
     <h2>notes</h2>
     <button id="get-btn" onclick="getUser()">get notes</button>
-    <form id="form" onsubmit="addUser(event, this )">
-      <input type="text" id="name" />
+    <!-- <form id="form" onsubmit="addUser(event, this )"> -->
+    <form id="form" onsubmit="updateUser(event, this )">
+      <!-- <input type="text" id="name" /> -->
       <input type="email" id="email" />
-      <input type="number" id="age" />
-      <!-- <input type="id" id="id" /> -->
 
       <button type="submit">send notes</button>
     </form>
+    <button id="btn-id" onclick="deleteUser()">Delete User</button>
   </body>
 </html>

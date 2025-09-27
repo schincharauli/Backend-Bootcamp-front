@@ -31,8 +31,6 @@ const addUser = async (event, form) => {
     const response = await instance.post("/users", {
       name: form.name.value,
       email: form.email.value,
-      age: form.age.value,
-      // id: form.id.value,
     });
     console.log(response);
   } catch (error) {}
@@ -44,4 +42,27 @@ const getUser = async () => {
     const response = await instance.get("/users");
     console.log(response);
   } catch (error) {}
+};
+
+const updateUser = async (event, form) => {
+  event.preventDefault();
+  const id = "21fe6ad8-0a3a-4f2a-93c0-72bb7ee89aa7";
+  try {
+    const response = await instance.put(`/users/${id}`, {
+      email: form.email.value,
+    });
+    console.log("user Updated", response.data);
+  } catch (error) {
+    console.error("Error updating user:", error);
+  }
+};
+
+const deleteUser = async (id) => {
+  try {
+    const id = "21fe6ad8-0a3a-4f2a-93c0-72bb7ee89aa7";
+    const response = await instance.delete(`/users/${id}`);
+    console.log("user Deleted Succesfully", response.data);
+  } catch (error) {
+    console.error("Error Deleting user:", error.message);
+  }
 };
