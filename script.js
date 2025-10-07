@@ -27,11 +27,17 @@ const addNote = async (event, form) => {
 
 const addUser = async (event, form) => {
   event.preventDefault();
+  const formData = new FormData();
+  formData.append("name", form.name.value);
+  formData.append("email", form.email.value);
+  formData.append("password", form.password.value);
+  formData.append("avatar", form.avatar.files[0]);
+
   try {
-    const response = await instance.post("/users", {
-      name: form.name.value,
-      email: form.email.value,
-      password: form.password.value,
+    const response = await instance.post("/users", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
     });
     console.log(response);
   } catch (error) {}

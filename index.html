@@ -11,9 +11,11 @@
     <h2>notes</h2>
     <button id="get-btn" onclick="getUser()">get notes</button>
     <!-- <form id="form" onsubmit="addUser(event, this )"> -->
-    <form id="form" onsubmit="login(event, this )">
-      <!-- <input type="text" id="name" placeholder="your name" /> -->
+    <form id="form" onsubmit="addUser(event, this )">
+      <input type="text" id="name" placeholder="your name" />
       <input type="email" id="email" placeholder="your email" />
+      <input type="file" id="avatar" accept="image" />
+
       <input
         type="password"
         id="password"
