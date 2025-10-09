@@ -11,19 +11,11 @@
     <h2>notes</h2>
     <button id="get-btn" onclick="getUser()">get notes</button>
     <!-- <form id="form" onsubmit="addUser(event, this )"> -->
-    <form id="form" onsubmit="addUser(event, this )">
-      <input type="text" id="name" placeholder="your name" />
-      <input type="email" id="email" placeholder="your email" />
-      <input type="file" id="avatar" accept="image" />
+    <form id="form" onsubmit="addNote(event, this )" novalidate>
+      <input type="text" id="title" placeholder="enter your note's title" />
+      <input type="text" id="text" placeholder="your text here" />
 
-      <input
-        type="password"
-        id="password"
-        name="password"
-        placeholder="write your password"
-      />
-
-      <button type="submit">send notes</button>
+      <button type="submit">Create Note</button>
     </form>
     <button id="btn-id" onclick="deleteUser()">Delete User</button>
   </body>

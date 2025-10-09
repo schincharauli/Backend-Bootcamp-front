@@ -15,13 +15,15 @@ const getNotes = async () => {
 };
 
 const addNote = async (event, form) => {
-  // preventDefault for prevent refreshing all the time
+  id = "ba99462e-e501-40ce-81ce-55b80a8b04ad";
   event.preventDefault();
-  // console.log(form.note.value);
   try {
-    const response = await instance.post("/notes", { note: form.note.value });
+    const response = await instance.post("/notes", {
+      title: form.title.value,
+      text: form.text.value,
+      userId: id,
+    });
     console.log(response);
-    // getNotes();
   } catch (error) {}
 };
 
@@ -41,6 +43,7 @@ const addUser = async (event, form) => {
     });
     console.log(response);
   } catch (error) {}
+  console.log(response);
 };
 
 const getUser = async () => {
